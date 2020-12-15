@@ -9,9 +9,11 @@
 'use strict';
 
 module.exports = (webhook) => {
-    /**
-     * Register some handlers here
-     *
-     * webhook.on('action1', (session) => session.variable = 'some value');
-     */
+	webhook.on('event1', (session) => {
+		if (session.count == null) {
+			session.count = 1;
+		} else {
+			session.count = session.count + 1
+		}
+	});
 };
