@@ -16,4 +16,7 @@ module.exports = (webhook) => {
 			session.count = session.count + 1
 		}
 	});
+	webhook.on('start', (session => {
+			(session.count == null)
+	}));
 };
