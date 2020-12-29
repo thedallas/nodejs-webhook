@@ -10,7 +10,7 @@
 
 module.exports = (webhook) => {
 	webhook.on('start', (session) => {
-		if (session.count > 1) {
+		if (session.count => 1) {
 			session.count = 0;
 		} else {
 			session.count = session.count + 0
