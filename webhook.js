@@ -9,6 +9,9 @@
 'use strict';
 
 module.exports = (webhook) => {
+	webhook.on('start', (session) => {
+			(session.count == null)
+	});
 	webhook.on('event1', (session) => {
 		if (session.count == null) {
 			session.count = 1;
@@ -16,7 +19,4 @@ module.exports = (webhook) => {
 			session.count = session.count + 1
 		}
 	});
-	webhook.on('start', (session => {
-			(session.count == null)
-	}));
 };
